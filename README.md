@@ -4,7 +4,7 @@ PyTorch implementation of speech embedding net and loss described here: https://
 
 Also contains code to create embeddings compatible as input for the speaker diarization model found at https://github.com/google/uis-rnn
 
-![training loss](https://github.com/HarryVolek/PyTorch_Speaker_Verification/blob/master/Results/Loss.png)
+![training loss](res/Loss.png)
 
 The TIMIT speech corpus was used to train the model, found here: https://catalog.ldc.upenn.edu/LDC93S1,
 or here, https://github.com/philipperemy/timit
@@ -59,6 +59,10 @@ EER across 10 epochs: 0.0377
 
 # D vector embedding creation
 
+### Create embedding with WebRTC VAD
 After training and testing the model, run dvector_create.py to create the numpy files train_sequence.npy, train_cluster_ids.npy, test_sequence.npy, and test_cluster_ids.npy. 
 
 These files can be loaded and used to train the uis-rnn model found at https://github.com/google/uis-rnn
+
+### Create embedding with librosa
+See `Demo of creating Embedding without WebRTC VAD.ipynb` for example.
